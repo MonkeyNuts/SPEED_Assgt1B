@@ -36,4 +36,4 @@ const ArticleSchema = mongoose.Schema({
     
 })
 
-export default mongoose.model('article', ArticleSchema)
+export default mongoose.model('article', ArticleSchema);

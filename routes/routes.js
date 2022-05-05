@@ -11,14 +11,14 @@ routes.get('/test', async (req, res) => res.json({ message: 'Testing API Route!'
 /// Assign Routes down here :
 
 // Article - related routes
-routes.get('/', getAllArticle);
-routes.get('/:id', getArticle);
-routes.post('/', createArticle);
-routes.put('/:id', updateArticle);
-routes.delete('/:id', deleteArticle);
+routes.get('/article', getAllArticle);
+routes.get('/article/:id', getArticle);
+routes.post('/article', createArticle);
+routes.put('/article/:id', updateArticle);
+routes.delete('/article/:id', deleteArticle);
 
 // User - related routes
-routes.post('/', createUser);
+routes.post('/user', createUser);
 
 
 export default routes;

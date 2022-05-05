@@ -1,8 +1,10 @@
-import ArticleModel from '../models/article.js';
+import ArticleModel from '../models/Article.js';
 
+
+/// POST [ '/article' ]
 export const createArticle = async (req, res) => {
-    // return res.json({ message: 'create Article'});
-
+    
+    /// For Testing
     const newArticle = new ArticleModel({ title: 'Jackk_Doe\'s Artilce' });
 
     try {
@@ -13,23 +15,33 @@ export const createArticle = async (req, res) => {
     }
 }
 
+
+/// GET [ '/article/:id' ]
 export const getArticle = async (req, res) => {
     return res.json({ message: 'get Article'});
 }
 
+
+/// GET [ '/article' ]
 export const getAllArticle = async (req, res) => {
     return res.json({ message: 'get all Article'});
 }
 
+
+/// PUT [ '/article/:id' ]
 export const updateArticle = async (req, res) => {
     return res.json({ message: 'update Article'});
 }
 
+
+/// DELETE [ '/article/:id' ]
 export const deleteArticle = async (req, res) => {
     return res.json({ message: 'delete Article'});
 }
 
 
+
+/// POST [ '/user' ]
 export const createUser = async (req, res) => {
     return res.json({ message: 'create User'});
 }
