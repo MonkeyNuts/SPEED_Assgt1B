@@ -7,7 +7,7 @@ const ArticleSchema = mongoose.Schema({
         required: true
     },
     
-    author: {
+    authors: {
         type: String,
         required: true,
     },
@@ -17,7 +17,7 @@ const ArticleSchema = mongoose.Schema({
         required: true,
     },
     
-    yop: {
+    pubyear: {
         type: String,
         required: true,
     },
@@ -27,7 +27,12 @@ const ArticleSchema = mongoose.Schema({
         required: true,
     },
 
-    practices: {
+    claim: {
+        type: String,
+        required: true,
+    },
+
+    evidence: {
         type: String,
         required: true,
     },
