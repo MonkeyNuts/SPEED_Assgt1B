@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const ArticleSchema = mongoose.Schema({
+    
     title: {
         type: String,
         required: true
@@ -8,30 +9,27 @@ const ArticleSchema = mongoose.Schema({
     
     author: {
         type: String,
+        required: true,
     },
     
-    journalName: {
+    source: {
         type: String,
+        required: true,
     },
     
     yop: {
-        type: Date,
-    },
-    
-    volume: {
         type: String,
+        required: true,
     },
-    
-    number: {
-        type: String,
-    },
-    
-    pages: {
-        type: String,
-    },
-    
+
     doi: {
         type: String,
+        required: true,
+    },
+
+    practices: {
+        type: String,
+        required: true,
     },
     
 })
