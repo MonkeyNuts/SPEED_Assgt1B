@@ -16,6 +16,21 @@ ul.header {
   background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 29%);
   padding: 0;
 }
+.logo{
+  width: 7rem;
+  height: 7rem;
+  float: left;
+  margin-top: -1.4rem;
+}
+h1,h2,th{
+  Font-Family: 'Oxygen', Sans-Serif;
+  Font-Size: 10 rem;
+}
+p,td{
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 1rem;
+}
+
 ul.header li a {
   color: #FFF;
   font-weight: bold;

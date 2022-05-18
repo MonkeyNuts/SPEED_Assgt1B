@@ -7,11 +7,12 @@ import ModeratorList from "./pages/moderator-list";
 import AnalystList from "./pages/analyst-list";
 import NotFoundPage from "./pages/404";
 import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
+import logo from "./images/SPEEDLOGO2.png";
 const App = () =>  {
     return (
         <BrowserRouter>
         <div>
-          <h1>Software Practice Empirical Evidence Database (SPEED) </h1>
+          <img className="logo" src={logo} />
             <ul className="header">
             <li><NavLink  to = "/">Home</NavLink></li>
                 <li><NavLink to = "/SEPractice">Select the Practice</NavLink></li>
