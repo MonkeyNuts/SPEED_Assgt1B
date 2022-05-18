@@ -5,7 +5,6 @@ import SEPractice from "./pages/SE-Practice";
 import SubmitArticle from "./pages/Submit-Article"; 
 import NotFoundPage from "./pages/404";
 import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
-
 const App = () =>  {
     return (
         <BrowserRouter>

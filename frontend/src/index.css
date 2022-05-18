@@ -1,18 +1,19 @@
 body {
-  background-color: #FFCC00;
+  background: rgb(238,174,202);
+  background: linear-gradient(142deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   padding: 20px;
   margin: 0;
-}
-h1, h2, p, ul, li {
-  font-family: sans-serif;
 }
 ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
+  Font-Family: 'Oxygen', Sans-Serif;
+  Font-Size: 5 rem;
 }
 ul.header {
-  background-color: #111;
+  background: rgb(238,174,202);
+  background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 29%);
   padding: 0;
 }
 ul.header li a {
@@ -32,7 +33,10 @@ ul.header li a {
 }
 .content li {
   margin-bottom: 10px;
+  Font-Family: 'Noto Serif', Serif;
+Font-Size: 16px;
 }
 .active {
-  background-color: #0099FF;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 27%);
 }
