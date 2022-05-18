@@ -36,7 +36,16 @@ const ArticleSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+
+    needModerator: {
+        type: Boolean,
+        default: true,
+    },
     
+    needAnalyst: {
+        type: Boolean,
+        default: true,
+    }
 })
 
 export default mongoose.model('article', ArticleSchema);
