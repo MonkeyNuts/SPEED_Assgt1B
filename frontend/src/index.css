@@ -22,7 +22,7 @@ ul.header {
   float: left;
   margin-top: -1.4rem;
 }
-h1,h2,th{
+h1,h2,h3,th{
   Font-Family: 'Oxygen', Sans-Serif;
   Font-Size: 10 rem;
 }
