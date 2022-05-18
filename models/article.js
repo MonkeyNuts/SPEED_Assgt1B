@@ -44,7 +44,7 @@ const ArticleSchema = mongoose.Schema({
     
     needAnalyst: {
         type: Boolean,
-        default: true,
+        default: false,
     }
 })
 
