@@ -1,6 +1,7 @@
 
 
 html{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   background: linear-gradient(270deg, #eeaeca, #94bbe9);
   background-size: 400% 400%;
 
@@ -66,8 +67,10 @@ ul.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
+  font-size: 1rem;
   padding: 20px;
   display: inline-block;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
 }
 .content {
   background: rgb(238,174,202);
@@ -93,6 +96,7 @@ Font-Size: 16px;
   Font-Size: 1.15rem;
 }
 select{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
   border-radius: 15px;
@@ -102,6 +106,8 @@ select{
   border: 3px solid rgba(238,174,202,1);
   border-color: rgba(238,174,202,1);
   background-color: 0;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 select:after{
   background: 0!important;
@@ -119,6 +125,7 @@ table,th,tr,td{
   border-left: 0!important; 
 }
 input{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   background: 0;
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
@@ -127,8 +134,11 @@ input{
   padding: 10px;
   border: 3px solid rgba(238,174,202,1);
   border-color: rgba(238,174,202,1);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 button{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
   border-radius: 15px;
@@ -138,4 +148,6 @@ button{
   border: 3px solid rgba(238,174,202,1);
   border-color: rgba(238,174,202,1);
   background-color: 0;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
