@@ -4,8 +4,11 @@ const SubmitArticle = () =>  {
      return (
       <div>
         <h2>Submit Article</h2>
-            <p>This will be a form to allow submitters to submit an article for possible 
-inclusion in our SEPER repo.</p>
+            <p>
+                Please use the form below to submit an article for our review. If the article
+                meets our acceptance criteria, then it will be approved and available for viewing 
+                on the site.
+            </p>
             <SubmissionForm/>
         </div>
     );
