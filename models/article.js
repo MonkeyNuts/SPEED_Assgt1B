@@ -1,39 +1,51 @@
 import mongoose from "mongoose";
 
 const ArticleSchema = mongoose.Schema({
+    
     title: {
         type: String,
         required: true
     },
     
-    author: {
+    authors: {
         type: String,
+        required: true,
     },
     
-    journalName: {
+    source: {
         type: String,
+        required: true,
     },
     
-    yop: {
-        type: Date,
-    },
-    
-    volume: {
+    pubyear: {
         type: String,
+        required: true,
     },
-    
-    number: {
-        type: String,
-    },
-    
-    pages: {
-        type: String,
-    },
-    
+
     doi: {
         type: String,
+        required: true,
+    },
+
+    claim: {
+        type: String,
+        required: true,
+    },
+
+    evidence: {
+        type: String,
+        required: true,
+    },
+
+    needModerator: {
+        type: Boolean,
+        default: true,
     },
     
+    needAnalyst: {
+        type: Boolean,
+        default: false,
+    }
 })
 
-export default mongoose.model('article', ArticleSchema)
+export default mongoose.model('article', ArticleSchema);

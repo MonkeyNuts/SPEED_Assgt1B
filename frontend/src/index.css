@@ -1,13 +1,153 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+html{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
+  background: linear-gradient(270deg, #eeaeca, #94bbe9);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 14s ease infinite;
+  -moz-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+body {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 18%;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  Font-Family: 'Oxygen', Sans-Serif;
+  Font-Size: 5 rem;
+  
+}
+ul.header {
+  background: rgb(238,174,202);
+  background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 29%);
+  padding: 0;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.logo{
+  width: 7rem;
+  height: 7rem;
+  float: left;
+  margin-top: -1.4rem;
+}
+h1,h2,h3,th{
+  Font-Family: 'Oxygen', Sans-Serif;
+  Font-Size: 10 rem;
+}
+p,td{
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 1rem;
+}
+
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 20px;
+  display: inline-block;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
+}
+.content {
+  background: rgb(238,174,202);
+  background: linear-gradient(270deg, rgba(238,174,202,0.7) 0%, rgba(148,187,233,0.7) 29%);
+  color:#FFF;
+  padding: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+  Font-Family: 'Noto Serif', Serif;
+Font-Size: 16px;
+}
+.active {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 27%);
+  Font-Size: 1.15rem;
+}
+select{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 1rem;
+  border-radius: 15px;
+  background: 0;
+  padding: 10px;
+  color: #FFF;
+  border: 3px solid rgba(238,174,202,1);
+  border-color: rgba(238,174,202,1);
+  background-color: 0;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+select:after{
+  background: 0!important;
+}
+select:active{
+  background: 0!important;
+}
+option{
+  background: 0!important;
+}
+table,th,tr,td{
+  border-bottom: 0!important; 
+  border-right: 0!important;
+  border-top: 0!important; 
+  border-left: 0!important; 
+}
+input{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
+  background: 0;
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 1rem;
+  border-radius: 15px;
+  color: #FFF!important;
+  padding: 10px;
+  border: 3px solid rgba(238,174,202,1);
+  border-color: rgba(238,174,202,1);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+button{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 1rem;
+  border-radius: 15px;
+  background: 0;
+  padding: 10px;
+  color: #FFF;
+  border: 3px solid rgba(238,174,202,1);
+  border-color: rgba(238,174,202,1);
+  background-color: 0;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }

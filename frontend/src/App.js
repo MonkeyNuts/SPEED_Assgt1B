@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from "./pages/home";
+import SEPractice from "./pages/SE-Practice";
+import SubmitArticle from "./pages/Submit-Article"; 
+import ModeratorList from "./pages/moderator-list";
+import AnalystList from "./pages/analyst-list";
+import NotFoundPage from "./pages/404";
+import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
+import logo from "./images/SPEEDLOGO2.png";
+
+const App = () =>  {
+    return (
+        <BrowserRouter>
+        <div>
+          <img className="logo" src={logo} />
+            <ul className="header">
+            <li><NavLink  to = "/">Home</NavLink></li>
+                <li><NavLink to = "/SEPractice">Select the Practice</NavLink></li>
+                <li><NavLink to = "/SubmitArticle">Submit an Article</NavLink></li>
+                <li><NavLink to = "/ModeratorList">Moderator Article Queue</NavLink></li>
+                <li><NavLink to = "/AnalystList">Analyst Article Queue</NavLink></li>
+            </ul>
+            
+          <div className="content">
+          <Routes>
+            
+            <Route path="/" element={<Home />}/>
+            <Route path="/SubmitArticle" element={<SubmitArticle />}/>
+            <Route path="/SEPractice" element={<SEPractice />}/>
+            <Route path="/ModeratorList" element={<ModeratorList />}/>
+            <Route path="/AnalystList" element={<AnalystList />}/>
+            <Route path='*' element={<NotFoundPage  />} />
+          </Routes>
+          </div>
+        </div>
+        </BrowserRouter>
+    );
 }
-
+ 
 export default App;
