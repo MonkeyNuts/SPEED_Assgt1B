@@ -8,6 +8,7 @@ import AnalystList from "./pages/analyst-list";
 import NotFoundPage from "./pages/404";
 import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
 import logo from "./images/SPEEDLOGO2.png";
+
 const App = () =>  {
     return (
         <BrowserRouter>
@@ -25,8 +26,8 @@ const App = () =>  {
           <Routes>
             
             <Route path="/" element={<Home />}/>
-            <Route path="/SEPractice" element={<SEPractice />}/>
             <Route path="/SubmitArticle" element={<SubmitArticle />}/>
+            <Route path="/SEPractice" element={<SEPractice />}/>
             <Route path="/ModeratorList" element={<ModeratorList />}/>
             <Route path="/AnalystList" element={<AnalystList />}/>
             <Route path='*' element={<NotFoundPage  />} />
