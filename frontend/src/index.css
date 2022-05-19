@@ -7,6 +7,7 @@ html{
   -webkit-animation: AnimationName 14s ease infinite;
   -moz-animation: AnimationName 14s ease infinite;
   animation: AnimationName 14s ease infinite;
+  
 }
 
 @-webkit-keyframes AnimationName {
@@ -36,12 +37,15 @@ ul.header li {
   margin: 0;
   Font-Family: 'Oxygen', Sans-Serif;
   Font-Size: 5 rem;
+  
 }
 ul.header {
   background: rgb(238,174,202);
   background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 29%);
   padding: 0;
   border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .logo{
   width: 7rem;
@@ -71,6 +75,8 @@ ul.header li a {
   color:#FFF;
   padding: 20px;
   border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .content h2 {
   padding: 0;
