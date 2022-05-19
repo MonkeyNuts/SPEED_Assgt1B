@@ -91,6 +91,10 @@ select{
   Font-Size: 1rem;
   border-radius: 15px;
   background: 0;
+  padding: 10px;
+  color: #FFF;
+  border: 3px solid rgba(238,174,202,1);
+  border-color: rgba(238,174,202,1);
 }
 table,th,tr,td{
   border-bottom: 0!important; 
@@ -103,4 +107,8 @@ input{
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
   border-radius: 15px;
+  color: #FFF!important;
+  padding: 10px;
+  border: 3px solid rgba(238,174,202,1);
+  border-color: rgba(238,174,202,1);
 }
