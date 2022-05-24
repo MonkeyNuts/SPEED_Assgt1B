@@ -1,14 +1,15 @@
 
 
 html{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   background: linear-gradient(270deg, #eeaeca, #94bbe9);
   background-size: 400% 400%;
 
   -webkit-animation: AnimationName 14s ease infinite;
   -moz-animation: AnimationName 14s ease infinite;
   animation: AnimationName 14s ease infinite;
+  
 }
-
 @-webkit-keyframes AnimationName {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
@@ -36,12 +37,15 @@ ul.header li {
   margin: 0;
   Font-Family: 'Oxygen', Sans-Serif;
   Font-Size: 5 rem;
+  
 }
 ul.header {
   background: rgb(238,174,202);
   background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 29%);
   padding: 0;
   border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .logo{
   width: 7rem;
@@ -57,13 +61,14 @@ p,td{
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
 }
-
 ul.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
+  font-size: 1rem;
   padding: 20px;
   display: inline-block;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
 }
 .content {
   background: rgb(238,174,202);
@@ -71,6 +76,8 @@ ul.header li a {
   color:#FFF;
   padding: 20px;
   border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .content h2 {
   padding: 0;
@@ -81,12 +88,8 @@ ul.header li a {
   Font-Family: 'Noto Serif', Serif;
 Font-Size: 16px;
 }
-.active {
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 27%);
-  Font-Size: 1.15rem;
-}
 select{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
   border-radius: 15px;
@@ -96,15 +99,8 @@ select{
   border: 3px solid rgba(238,174,202,1);
   border-color: rgba(238,174,202,1);
   background-color: 0;
-}
-select:after{
-  background: 0!important;
-}
-select:active{
-  background: 0!important;
-}
-option{
-  background: 0!important;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 table,th,tr,td{
   border-bottom: 0!important; 
@@ -113,6 +109,7 @@ table,th,tr,td{
   border-left: 0!important; 
 }
 input{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   background: 0;
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
@@ -121,8 +118,11 @@ input{
   padding: 10px;
   border: 3px solid rgba(238,174,202,1);
   border-color: rgba(238,174,202,1);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 button{
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   Font-Family: 'Noto Serif', Serif;
   Font-Size: 1rem;
   border-radius: 15px;
@@ -132,4 +132,6 @@ button{
   border: 3px solid rgba(238,174,202,1);
   border-color: rgba(238,174,202,1);
   background-color: 0;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
