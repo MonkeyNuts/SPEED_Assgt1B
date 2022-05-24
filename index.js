@@ -21,6 +21,6 @@ app.use('/api', routes);
 const PORT = process.env.PORT || 5000;
 
 // Set MongoDB      (Read key from .env)
-await mongodbConnect("CONNECTION_URL = mongodb+srv://CISEmember:CISEmember@cisedatabase.tyxyv.mongodb.net/ProjectDatabase?retryWrites=true&w=majority");
+await mongodbConnect("mongodb+srv://CISEmember:CISEmember@cisedatabase.tyxyv.mongodb.net/ProjectDatabase?retryWrites=true&w=majority");
 
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
