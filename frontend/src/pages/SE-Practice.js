@@ -4,11 +4,13 @@ import tablecolumns from "../components/tablecolumns.js";
 import Dropdown from "../components/Dropdown.js";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 
 const SEPractice = () => {
 
   const [datas, setData] = useState([]);
+  const { register, handleSubmit, reset } = useForm();
 
   useEffect(() => {
     const getDT = async () => {
@@ -20,16 +22,30 @@ const SEPractice = () => {
         console.log(error);
       }
     }
+
     getDT();
   }, []);
+
+
+  const searchByTitle = async (datas) => {
+    try {
+      const searchResult = await axios.get(`http://localhost:5000/api/search/${datas.searchTitle}/false/false`);
+      setData(searchResult.data);
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
 
   return (
     <div>
       <h2>Select SE Practice to get evidence for the claimed benefits</h2>
       <div className="inline">
-      <Dropdown />
-      <input className="search" type="text" placeholder="Search Title.."></input>
+        <Dropdown />
+        <form onSubmit={handleSubmit(searchByTitle)}>
+          <input {...register("searchTitle")} className="search" type="text" placeholder="Search Title.." required />
+        </form>
       </div>
       <Styles>
         <Table

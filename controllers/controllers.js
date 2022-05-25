@@ -80,6 +80,25 @@ export const getAnalystArticles = async (req, res) => {
 }
 
 
+/// GET [ '/search/:title/:moderator/:analyst' ]
+export const searchByTitle = async (req, res) => {
+
+    const searchModerator = (req.params.moderator === "true" ? true : false);
+    const searchAnalyst = (req.params.analyst === "true" ? true : false);
+
+    // console.log("Req param title: ", req.params.title);
+    // console.log("Found Searching Moderator: ", req.params.moderator);
+    // console.log("Found Searching Analyst: ", req.params.analyst);
+    
+    try {
+        const result = await ArticleModel.find({ title: { $regex: req.params.title }, needModerator: searchModerator,  needAnalyst: searchAnalyst });
+        return res.json(result);
+    } catch (error) {
+        return res.status(500).json({ message: error });
+    }
+}
+
+
 /*     USER CONTROLLERS     */
 
 /// POST [ '/user' ]
