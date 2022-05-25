@@ -108,7 +108,7 @@ table,th,tr,td{
   outline: 3px solid #eeaecab3;
   outline-offset: 0px;
 }
-input{
+.inputs{
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   background: 0;
   Font-Family: 'Noto Serif', Serif;
