@@ -26,7 +26,10 @@ const ModeratorList = () => {
   return (
     <div>
       <h2>Submitted Articles awaiting Moderation</h2>
+      <div className="inline">
       <Dropdown />
+      <input className="search" type="text" placeholder="Search Title.."></input>
+      </div>
       <Styles>
         <Table
           data={datas}

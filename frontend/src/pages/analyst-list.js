@@ -26,7 +26,10 @@ const AnalystList = () => {
   return (
     <div>
       <h2>Submitted Articles awaiting Analyst Review</h2>
+      <div className="inline">
       <Dropdown />
+      <input className="search" type="text" placeholder="Search Title.."></input>
+      </div>
       <Styles>
         <Table
           data={datas}

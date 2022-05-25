@@ -27,7 +27,10 @@ const SEPractice = () => {
   return (
     <div>
       <h2>Select SE Practice to get evidence for the claimed benefits</h2>
+      <div className="inline">
       <Dropdown />
+      <input className="search" type="text" placeholder="Search Title.."></input>
+      </div>
       <Styles>
         <Table
           data={datas}

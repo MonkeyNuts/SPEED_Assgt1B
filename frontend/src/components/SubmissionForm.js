@@ -49,7 +49,7 @@ const SubmissionForm = () => {
       <br/>
       <br/>
 
-      <select {...register("evidence")}>
+      <select {...register("evidence")} >
         <option value="">Select Evidence...</option>
         <option value="weak support">Weak Support</option>
         <option value="strong support">Strong Support</option>
@@ -68,7 +68,7 @@ const SubmissionForm = () => {
 
       <p>{result}</p>
 
-      <input type="submit" />
+      <input className="submit" type="submit" />
     </form>
   );
 }
