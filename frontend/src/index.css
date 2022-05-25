@@ -41,7 +41,7 @@ ul.header li {
 }
 ul.header {
   background: rgb(238,174,202);
-  background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 29%);
+  background: linear-gradient(270deg, rgba(238,174,202,1) 0%, #94bbe9 29%);
   padding: 0;
   border-radius: 15px;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
@@ -88,6 +88,23 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   Font-Family: 'Noto Serif', Serif;
 Font-Size: 16px;
 }
+/*  ALL YOU NEED is these 3 lines  */
+.stylish > span {position:relative;}
+.stylish select {position:absolute;left:0px;transform:scaleY(0);transform-origin:top center;}
+.stylish.dropped-down select {transform:scaleY(1);}
+
+
+
+
+/*  But if you want to make it sexier...  */
+* {box-sizing:border-box;}
+.stylish input, .stylish select {min-width:260px; margin:0 0 0 10px; border:1px solid silver;}
+.stylish, .stylish select, .stylish select optgroup {font:15px calibri, sans-serif;}
+.stylish input             {border-radius:4px; padding:12px;}
+.stylish select            {border-top-color:transparent;transition:transform 200ms ease;}
+.stylish select option     {border-bottom:1px solid #ddd; padding:12px 0px 10px 24px;}
+.stylish select optgroup   {padding:8px 20px 3px 0; text-align:right;}  
+.stylish select optgroup   {background:#3c7700; color:white; font-size:12px; font-variant:small-caps;}
 select{
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   Font-Family: 'Noto Serif', Serif;
@@ -101,6 +118,10 @@ select{
   background-color: 0;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+select option {
+  background: #94bbe9;
+  Font-Size: 1.2rem!important;
 }
 table,th,tr,td{
   border: 0;
@@ -121,26 +142,10 @@ input{
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
-input::content{
-  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
-  background: 0;
-  Font-Family: 'Noto Serif', Serif;
-  Font-Size: 1rem;
-  border-radius: 15px;
-  color: #FFF!important;
-  padding: 10px;
-  border: 3px solid rgba(238,174,202,1);
-  border-color: rgba(238,174,202,1);
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-}
-input, select, textarea{
-  color: #FFF!important;
+input:focus {
+  border-color: rgba(238,174,202,1)!important;
 }
 
-textarea:focus, input:focus {
-  color: #FFF!important;
-}
 button{
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -3px 0px rgba(206,89,55,0);
   Font-Family: 'Noto Serif', Serif;
@@ -163,7 +168,18 @@ button{
   outline: 3px solid #eeaecab3;
   outline-offset: 0px;
 }
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
   color: #FFF!important;
+}
+input::selection{
+
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 1rem;
+  border-radius: 15px;
+  color: #FFF!important;
+  padding: 10px;
+  border: 3px solid rgba(238,174,202,1);
+  border-color: rgba(238,174,202,1);
+  border:#eeaeca;
+
 }
