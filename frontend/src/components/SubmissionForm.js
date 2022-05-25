@@ -17,7 +17,7 @@ const SubmissionForm = () => {
       <select {...register("sepractice")}>
         <option value="">Select SE practice...</option>
         <option value="TDD">TDD</option>
-        <option value="Mob Programming">Mob Programmin</option>
+        <option value="Mob Programming">Mob Programming</option>
       </select>
       <p>{result}</p>
       <input type="submit" />
