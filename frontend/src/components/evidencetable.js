@@ -45,8 +45,8 @@ const {
                       <span>
                         {column.isSorted
                           ? column.isSortedDesc
-                            ? ' ￿'
-                            : ' ￿'
+                            ? ' 🠕'
+                            : ' 🠗'
                           : ''}
                       </span>
                     </th>
