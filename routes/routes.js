@@ -1,6 +1,6 @@
 import express from "express";
 
-import { createArticle, getArticle, getAllArticle, updateArticle, deleteArticle, createUser, getModeratorArticles, getAnalystArticles } from '../controllers/controllers.js';
+import { createArticle, getArticle, getAllArticle, updateArticle, deleteArticle, createUser, getModeratorArticles, getAnalystArticles, searchByTitle } from '../controllers/controllers.js';
 
 const routes = express.Router();
 
@@ -20,6 +20,9 @@ routes.delete('/article/:id', deleteArticle);
 routes.get('/moderator/article', getModeratorArticles);
 
 routes.get('/analyst/article', getAnalystArticles);
+
+// Search by Article names
+routes.get('/search/:title/:moderator/:analyst', searchByTitle);
 
 // User - related routes
 routes.post('/user', createUser);

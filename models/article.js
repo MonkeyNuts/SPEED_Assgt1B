@@ -29,12 +29,17 @@ const ArticleSchema = mongoose.Schema({
 
     claim: {
         type: String,
-        required: true,
+        default: "product quality improvement"
     },
 
     evidence: {
         type: String,
-        required: true,
+        default: "weak support"
+    },
+
+    sepractice: {
+        type: String,
+        default: "tdd"
     },
 
     needModerator: {

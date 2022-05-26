@@ -2,7 +2,7 @@ import React from "react";
  
 const Home = () =>  {
     return (
-      <div>
+      <div className="flexp">
         <h2> Welcome to SPEED</h2>
         <p>
           SPEED stands for Software Practice Empirical Evidence Database. It is an important and powerful tool that allows

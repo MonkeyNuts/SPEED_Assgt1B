@@ -20,6 +20,12 @@ const App = () =>  {
                 <li><NavLink to = "/SubmitArticle">Submit an Article</NavLink></li>
                 <li><NavLink to = "/ModeratorList">Moderator Article Queue</NavLink></li>
                 <li><NavLink to = "/AnalystList">Analyst Article Queue</NavLink></li>
+
+                <select className="userstate">
+                <option value="">Select User state</option>
+                <option value="tdd">Moderator</option>
+                <option value="mob">Analyst</option>
+                </select>
             </ul>
             
           <div className="content">
@@ -36,6 +42,7 @@ const App = () =>  {
         </div>
         </BrowserRouter>
     );
+    
 }
- 
+
 export default App;
