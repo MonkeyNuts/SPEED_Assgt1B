@@ -23,8 +23,9 @@ const App = () =>  {
 
                 <select className="userstate">
                 <option value="">Select User state</option>
-                <option value="tdd">Moderator</option>
-                <option value="mob">Analyst</option>
+                <option value="user">User</option>
+                <option value="mod">Moderator</option>
+                <option value="ana">Analyst</option>
                 </select>
             </ul>
             
