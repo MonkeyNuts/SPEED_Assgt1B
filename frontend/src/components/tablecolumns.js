@@ -20,12 +20,6 @@ const tablecolumns = [
     },{
       Header: 'Level of Evidence',
       accessor: 'evidence'
-    },{
-      Header: 'Moderation',
-      accessor: ''
-    },{
-      Header: 'Approval',
-      accessor: ''
     }
   ]
   module.exports = tablecolumns
