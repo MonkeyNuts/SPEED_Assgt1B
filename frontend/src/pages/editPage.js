@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import ModEditPage from "./editPageMod";
 
 
 const EditPage = () => {
@@ -43,7 +44,6 @@ const EditPage = () => {
 
     /// If Click YES
     const handleYesApprov = async () => {
-
         const getUserType = userTypeCheck();
 
         try {
@@ -70,19 +70,26 @@ const EditPage = () => {
 
     return (
         <div className="flexp">
-            <h2>Moderate Article?</h2>
+            <h2>{(userType==="mod") ? "Moderate" : "Analyst"} Article?</h2>
             <p>
                 Approving this <i>"{artitleTitle}"</i> aricle will send it to the {(userType==="mod") ? "Analyst Article Queue" : "Public Article list"}.
             </p>
 
-            {/* Only Moderator should see the below part */}
+            {/* Moderator and Analyst have different showing choices */}
             {(userType === "mod")
-                && <p>Only Moderator should see this</p>
+
+                /// Using for Moderator
+                ? <ModEditPage articleID={id} handleYesApprov={handleYesApprov} handleNoApprov={handleNoApprov} userTypeRedirect={userTypeRedirect}/>
+
+                /// Using for Analyst
+                : <>
+                    <p>Approval?</p>
+                    <button type="button" onClick={handleYesApprov}>Yes (Approve)</button>
+                    <button type="button" onClick={handleNoApprov}>No (Delete)</button>
+                </>
             }
 
-            <p>Approval?</p>
-            <button type="button" onClick={handleYesApprov}>Yes</button>
-            <button type="button" onClick={handleNoApprov}>No</button>
+            
         </div>
 
     );
