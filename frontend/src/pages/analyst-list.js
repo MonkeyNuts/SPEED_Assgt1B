@@ -37,11 +37,31 @@ const AnalystList = () => {
   }
 
 
+  /// Dropdown component handler
+  const handleDropdown = async (event) => {
+    // console.log("Event value: ", event.target.value);
+    try {
+      const data = await axios.get('http://localhost:5000/api/analyst/article');
+      const articles = data.data;
+
+      const filtered = articles.filter((article) => {
+        const isTDD = (event.target.value === "TDD" ? "tdd" : "mob");
+        return article.sepractice === isTDD
+      });
+
+      setData(filtered);
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
   return (
     <div>
       <h2>Submitted Articles awaiting Analyst Review</h2>
       <div className="inline">
-        <Dropdown />
+        <Dropdown handleDropdown={handleDropdown} />
         <form onSubmit={handleSubmit(searchByTitle)}>
           <input {...register("searchTitle")} className="search" type="text" placeholder="Search Title.." required />
         </form>
