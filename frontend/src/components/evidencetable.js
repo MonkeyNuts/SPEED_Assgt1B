@@ -71,7 +71,7 @@ const Table = ({ columns, data, userType }) => {
 
                     // Check Header, only cover Title with NavLink
                     (cell.column.Header === "Title" && (userType === "mod" || userType === "ana"))
-                      ? <Link to={destinationRoute} >{cell.render('Cell')}</Link>
+                      ? <Link to={destinationRoute} state={{ userType }} >{cell.render('Cell')}</Link>
                       :
                       <>{cell.render('Cell')}</>
 

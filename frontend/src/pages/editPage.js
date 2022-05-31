@@ -1,12 +1,70 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const EditPage = () => {
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
     // Get Article ID
     const { id } = useParams();
+    const userType = location.state?.userType;
 
-    console.log("Article ID: ", id);
+    // console.log("Article ID: ", id);
+    // console.log("UserType: ", userType);
+
+
+    /// Check whether : Moderator (mod) or Analyst (ana)
+    const userTypeCheck = () => {
+        //* If [userType] is Mod
+        if (userType === "mod") {
+            return { needModerator: false, needAnalyst: true };
+        }
+
+        //* Else, if [userType] is Ana
+        return { needAnalyst: false };
+    }
+
+
+    /// Redirect [userType] to their reponsible page
+    const userTypeRedirect = () => {
+        if (userType === "mod") {
+            navigate("/ModeratorList");
+        }
+        else {
+            navigate("/AnalystList");
+        }
+    }
+
+
+    /// If Click YES
+    const handleYesApprov = async () => {
+
+        const getUserType = userTypeCheck();
+
+        try {
+            await axios.patch(`http://localhost:5000/api/article/${id}`, { ...getUserType })
+        } catch (error) {
+            console.log(error);
+        }
+
+        userTypeRedirect();
+    }
+
+
+    /// If Click NO
+    const handleNoApprov = async () => {
+        try {
+            await axios.delete(`http://localhost:5000/api/article/${id}`)
+        } catch (error) {
+            console.log(error);
+        }
+
+        userTypeRedirect();
+    }
+
 
     return (
         <div className="flexp">
@@ -14,9 +72,15 @@ const EditPage = () => {
             <p>
                 Approving this aricle will send it to the Analyst Article Queue.
             </p>
+
+            {/* Only Moderator should see the below part */}
+            {(userType === "mod")
+                && <p>Only Moderator should see this</p>
+            }
+
             <p>Approval?</p>
-            <button type="button" onClick={() => {}}>Yes</button>
-            <button type="button" onClick={() => {}}>No</button>
+            <button type="button" onClick={handleYesApprov}>Yes</button>
+            <button type="button" onClick={handleNoApprov}>No</button>
         </div>
 
     );
