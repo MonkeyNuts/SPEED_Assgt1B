@@ -9,7 +9,7 @@ const Dropdown = ({ handleDropdown }) => {
   return (
     <div>
       <select onChange={handleDropdown}>
-        <option value="">Select an SE Practice </option>
+        <option value="all">Select an SE Practice </option>
         {optionItems}
       </select>
     </div>

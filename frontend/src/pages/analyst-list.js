@@ -44,6 +44,13 @@ const AnalystList = () => {
       const data = await axios.get('http://localhost:5000/api/analyst/article');
       const articles = data.data;
 
+      // If not clicking both TDD or Mob-Programming
+      // return all Article
+      if (event.target.value === "all") {
+        setData(articles);
+        return;
+      }
+
       const filtered = articles.filter((article) => {
         const isTDD = (event.target.value === "TDD" ? "tdd" : "mob");
         return article.sepractice === isTDD
