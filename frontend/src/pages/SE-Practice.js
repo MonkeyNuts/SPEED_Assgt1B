@@ -71,6 +71,7 @@ const SEPractice = () => {
         <Table
           data={datas}
           columns={tablecolumns}
+          userType="pub"
         />
       </Styles>
     </div>

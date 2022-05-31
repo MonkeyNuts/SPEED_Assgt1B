@@ -70,6 +70,7 @@ const AnalystList = () => {
         <Table
           data={datas}
           columns={tablecolumns}
+          userType="ana"
         />
       </Styles>
     </div>

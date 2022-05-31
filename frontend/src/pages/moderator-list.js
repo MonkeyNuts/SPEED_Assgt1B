@@ -69,6 +69,7 @@ const ModeratorList = () => {
         <Table
           data={datas}
           columns={tablecolumns}
+          userType="mod"
         />
       </Styles>
     </div>
