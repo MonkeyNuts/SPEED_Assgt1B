@@ -11,9 +11,11 @@ const EditPage = () => {
     // Get Article ID
     const { id } = useParams();
     const userType = location.state?.userType;
+    const artitleTitle = location.state?.title;
 
     // console.log("Article ID: ", id);
     // console.log("UserType: ", userType);
+    // console.log("Artitle: ", artitleTitle);
 
 
     /// Check whether : Moderator (mod) or Analyst (ana)
@@ -70,7 +72,7 @@ const EditPage = () => {
         <div className="flexp">
             <h2>Moderate Article?</h2>
             <p>
-                Approving this aricle will send it to the Analyst Article Queue.
+                Approving this <i>"{artitleTitle}"</i> aricle will send it to the {(userType==="mod") ? "Analyst Article Queue" : "Public Article list"}.
             </p>
 
             {/* Only Moderator should see the below part */}
