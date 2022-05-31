@@ -38,7 +38,7 @@ const App = () =>  {
             <Route path="/SEPractice" element={<SEPractice />}/>
             <Route path="/ModeratorList" element={<ModeratorList />}/>
             <Route path="/AnalystList" element={<AnalystList />}/>
-            <Route path="/EditPage" element={<EditPage />}></Route>
+            <Route path="/EditPage/:id" element={<EditPage />}></Route>
             <Route path='*' element={<NotFoundPage  />} />
           </Routes>
           </div>

@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 const AnalystList = () => {
 
   const [datas, setData] = useState([]);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     const getDT = async () => {
@@ -50,6 +50,7 @@ const AnalystList = () => {
         <Table
           data={datas}
           columns={tablecolumns}
+          userType="ana"
         />
       </Styles>
     </div>

@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 const SEPractice = () => {
 
   const [datas, setData] = useState([]);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     const getDT = async () => {
@@ -51,6 +51,7 @@ const SEPractice = () => {
         <Table
           data={datas}
           columns={tablecolumns}
+          userType="pub"
         />
       </Styles>
     </div>
