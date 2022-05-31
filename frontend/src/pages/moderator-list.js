@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 const ModeratorList = () => {
 
   const [datas, setData] = useState([]);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     const getDT = async () => {
