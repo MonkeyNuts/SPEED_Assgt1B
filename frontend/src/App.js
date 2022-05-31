@@ -5,6 +5,7 @@ import SEPractice from "./pages/SE-Practice";
 import SubmitArticle from "./pages/Submit-Article"; 
 import ModeratorList from "./pages/moderator-list";
 import AnalystList from "./pages/analyst-list";
+import EditPage from "./pages/editPage";
 import NotFoundPage from "./pages/404";
 import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
 import logo from "./images/SPEEDLOGO2.png";
@@ -37,6 +38,7 @@ const App = () =>  {
             <Route path="/SEPractice" element={<SEPractice />}/>
             <Route path="/ModeratorList" element={<ModeratorList />}/>
             <Route path="/AnalystList" element={<AnalystList />}/>
+            <Route path="/EditPage" element={<EditPage />}></Route>
             <Route path='*' element={<NotFoundPage  />} />
           </Routes>
           </div>

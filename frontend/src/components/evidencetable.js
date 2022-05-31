@@ -1,5 +1,6 @@
 import React from "react";
 import { useTable, useSortBy, usePagination } from 'react-table';
+import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
 const Table = ({columns, data}) => {
 const {
     getTableProps,
@@ -58,9 +59,9 @@ const {
               {page.map((row, i) => {
                 prepareRow(row)
                 return (
-                  <tr {...row.getRowProps()}>
+                  <tr {...row.getRowProps()}>                
                     {row.cells.map(cell => {
-                      return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                      return <td {...cell.getCellProps()}><NavLink to = "/editPage">{cell.render('Cell')}</NavLink></td>
                     })}
                   </tr>
                 )
