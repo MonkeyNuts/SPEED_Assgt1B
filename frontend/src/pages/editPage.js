@@ -69,7 +69,7 @@ const EditPage = () => {
 
 
     return (
-        <div className="flexp">
+        <div className="flexp" font-size = "45px">
             <h2>{(userType==="mod") ? "Moderate" : "Analyst"} Article?</h2>
             <p>
                 Approving this <i>"{artitleTitle}"</i> aricle will send it to the {(userType==="mod") ? "Analyst Article Queue" : "Public Article list"}.
@@ -84,8 +84,8 @@ const EditPage = () => {
                 /// Using for Analyst
                 : <>
                     <p>Approval?</p>
-                    <button type="button" onClick={handleYesApprov}>Yes (Approve)</button>
-                    <button type="button" onClick={handleNoApprov}>No (Delete)</button>
+                    <button className ="anabuttons" type="button" onClick={handleYesApprov}>Yes (Approve)</button>
+                    <button className ="anabuttons" type="button" onClick={handleNoApprov}>No (Delete)</button>
                 </>
             }
 
