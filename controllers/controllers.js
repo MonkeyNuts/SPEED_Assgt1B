@@ -1,5 +1,4 @@
 import ArticleModel from '../models/Article.js';
-import UserModel from '../models/User.js';
 
 
 /*     ARTICLE CONTROLLERS     */
@@ -96,14 +95,4 @@ export const searchByTitle = async (req, res) => {
     } catch (error) {
         return res.status(500).json({ message: error });
     }
-}
-
-
-/*     USER CONTROLLERS     */
-
-/// POST [ '/user' ]
-export const createUser = async (req, res) => {
-    UserModel.create(req.body)
-        .then(user => res.json({ message: 'New User created successfully!' }))
-        .catch(err => res.status(400).json({ err }));
 }

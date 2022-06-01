@@ -40,7 +40,7 @@ const App = () => {
           </ul>
 
         <div className="content">
-          <p>{UserType}</p>
+          <p>Log-in as {UserType}</p>
           <Routes>
 
             <Route path="/" element={<Home />} />
