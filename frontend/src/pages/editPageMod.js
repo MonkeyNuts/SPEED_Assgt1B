@@ -76,15 +76,16 @@ const ModEditPage = ({ articleID, handleYesApprov, handleNoApprov, userTypeRedir
                 <option value="mob">Mob Programming</option>
             </select>
 
-
+            <div className="formbuttons">
             {/* UPDATE Button */}
-            <button type="submit" >Update</button>
+            <button className="fbuttons" type="submit" >Update</button>
 
             {/* APPROVE Button */}
-            <button type="button" onClick={handleYesApprov}>Approve</button>
+            <button className="fbuttons" type="button" onClick={handleYesApprov}>Approve</button>
 
             {/* DELETE Button */}
-            <button type="button" onClick={handleNoApprov}>Delete</button>
+            <button className="fbuttons" type="button" onClick={handleNoApprov}>Delete</button>
+            </div>
         </form>
     );
 }
