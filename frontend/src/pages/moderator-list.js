@@ -15,7 +15,7 @@ const ModeratorList = () => {
   useEffect(() => {
     const getDT = async () => {
       try {
-        const data = await axios.get('http://localhost:5000/api/moderator/article');
+        const data = await axios.get('/api/moderator/article');
         setData(data.data);
 
       } catch (error) {
@@ -28,7 +28,7 @@ const ModeratorList = () => {
 
   const searchByTitle = async (datas) => {
     try {
-      const searchResult = await axios.get(`http://localhost:5000/api/search/${datas.searchTitle}/true/false`);
+      const searchResult = await axios.get(`/api/search/${datas.searchTitle}/true/false`);
       setData(searchResult.data);
 
     } catch (error) {
@@ -40,7 +40,7 @@ const ModeratorList = () => {
   const handleDropdown = async (event) => {
     // console.log("Event value: ", event.target.value);
     try {
-      const data = await axios.get('http://localhost:5000/api/moderator/article');
+      const data = await axios.get('/api/moderator/article');
       const articles = data.data;
 
       // If not clicking both TDD or Mob-Programming

@@ -11,7 +11,7 @@ const ModEditPage = ({ articleID, handleYesApprov, handleNoApprov, userTypeRedir
     useEffect(() => {
         const getDt = async () => {
             try {
-                const data = await axios.get(`http://localhost:5000/api/article/${articleID}`);
+                const data = await axios.get(`/api/article/${articleID}`);
                 // console.log("Datas: ", data.data);
                 setData(data.data);
             } catch (error) {
@@ -29,7 +29,7 @@ const ModEditPage = ({ articleID, handleYesApprov, handleNoApprov, userTypeRedir
         e.preventDefault();
 
         try {
-            const data = await axios.patch(`http://localhost:5000/api/article/${articleID}`, { ...datas });
+            const data = await axios.patch(`/api/article/${articleID}`, { ...datas });
             console.log("Datas: ", data.data);
             // setData(data.data);
 

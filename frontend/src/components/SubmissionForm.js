@@ -10,7 +10,7 @@ const SubmissionForm = () => {
     // setResult(JSON.stringify(data));
 
     try {
-      await axios.post('http://localhost:5000/api/article', {
+      await axios.post('/api/article', {
         "title": data.title,
         "authors": data.authors,
         "source": data.source,

@@ -15,7 +15,7 @@ const SEPractice = () => {
   useEffect(() => {
     const getDT = async () => {
       try {
-        const data = await axios.get('http://localhost:5000/api/article');
+        const data = await axios.get('/api/article');
         setData(data.data);
 
       } catch (error) {
@@ -29,7 +29,7 @@ const SEPractice = () => {
 
   const searchByTitle = async (datas) => {
     try {
-      const searchResult = await axios.get(`http://localhost:5000/api/search/${datas.searchTitle}/false/false`);
+      const searchResult = await axios.get(`/api/search/${datas.searchTitle}/false/false`);
       setData(searchResult.data);
 
     } catch (error) {
@@ -42,7 +42,7 @@ const SEPractice = () => {
   const handleDropdown = async (event) => {
     // console.log("Event value: ", event.target.value);
     try {
-      const data = await axios.get('http://localhost:5000/api/article');
+      const data = await axios.get('/api/article');
       const articles = data.data;
 
       // If not clicking both TDD or Mob-Programming

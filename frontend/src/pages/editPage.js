@@ -47,7 +47,7 @@ const EditPage = () => {
         const getUserType = userTypeCheck();
 
         try {
-            await axios.patch(`http://localhost:5000/api/article/${id}`, { ...getUserType })
+            await axios.patch(`/api/article/${id}`, { ...getUserType })
         } catch (error) {
             console.log(error);
         }
@@ -59,7 +59,7 @@ const EditPage = () => {
     /// If Click NO
     const handleNoApprov = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/article/${id}`)
+            await axios.delete(`/api/article/${id}`)
         } catch (error) {
             console.log(error);
         }
