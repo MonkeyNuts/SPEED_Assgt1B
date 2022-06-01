@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import Home from "./pages/home";
 import SEPractice from "./pages/SE-Practice";
 import SubmitArticle from "./pages/Submit-Article";
@@ -9,29 +8,39 @@ import EditPage from "./pages/editPage";
 import NotFoundPage from "./pages/404";
 import { Route, Routes, NavLink, BrowserRouter } from 'react-router-dom'
 import logo from "./images/SPEEDLOGO2.png";
+import UserNavOptions from "./components/usernavoptions";
 
 const App = () => {
+
+  let [UserType, setUserType] = useState('');
+
+  const handleChange = (event) => {
+    setUserType(event.target.value);
+  }
+
   return (
     <BrowserRouter>
       <div>
-        <img className="logo" src={logo} />
+        <img className="logo" src={logo} alt={"SPEED Logo"}/>
 
-        <ul className="header">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/SEPractice">Select the Practice</NavLink></li>
-          <li><NavLink to="/SubmitArticle">Submit an Article</NavLink></li>
-          <li><NavLink to="/ModeratorList">Moderator Article Queue</NavLink></li>
-          <li><NavLink to="/AnalystList">Analyst Article Queue</NavLink></li>
-
-          <select className="userstate">
-            <option value="">Select User state</option>
-            <option value="user">User</option>
-            <option value="mod">Moderator</option>
-            <option value="ana">Analyst</option>
-          </select>
-        </ul>
+          <ul className="header">
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/SEPractice">Select the Practice</NavLink></li>
+            <li><NavLink to="/SubmitArticle">Submit an Article</NavLink></li>
+            <li>
+              <UserNavOptions UserType={UserType}/>
+            </li>
+            
+            <select className="userstate" onChange={handleChange}>
+              <option value="">Select User state</option>
+              <option value="user">User</option>
+              <option value="moderator">Moderator</option>
+              <option value="analyst">Analyst</option>
+            </select>
+          </ul>
 
         <div className="content">
+          <p>{UserType}</p>
           <Routes>
 
             <Route path="/" element={<Home />} />
