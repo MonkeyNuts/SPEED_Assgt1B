@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 /// Create a connection to db collection from the passing key [url]
-export const mongodbConnect = async (url) => {
+async function mongodbConnect(url) {
     try {
         await mongoose.connect(url);
         console.log("Connect to MongoDB successfully!");
@@ -9,3 +9,5 @@ export const mongodbConnect = async (url) => {
         console.log(error);
     }
 }
+
+module.exports = mongodbConnect;

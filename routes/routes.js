@@ -1,6 +1,6 @@
-import express from "express";
+const express = require("express");
 
-import { createArticle, getArticle, getAllArticle, updateArticle, deleteArticle, getModeratorArticles, getAnalystArticles, searchByTitle } from '../controllers/controllers.js';
+const ArticleController = require("../controllers/controllers.js");
 
 const routes = express.Router();
 
@@ -11,20 +11,20 @@ routes.get('/test', async (req, res) => res.json({ message: 'Testing API Route!'
 /// Assign Routes down here :
 
 // Article - related routes
-routes.get('/article', getAllArticle);
-routes.get('/article/:id', getArticle);
-routes.post('/article', createArticle);
-routes.patch('/article/:id', updateArticle);
-routes.delete('/article/:id', deleteArticle);
+routes.get('/article', ArticleController.getAllArticle);
+routes.get('/article/:id', ArticleController.getArticle);
+routes.post('/article', ArticleController.createArticle);
+routes.patch('/article/:id', ArticleController.updateArticle);
+routes.delete('/article/:id', ArticleController.deleteArticle);
 
 // Get Articles that belongs to Moderator
-routes.get('/moderator/article', getModeratorArticles);
+routes.get('/moderator/article', ArticleController.getModeratorArticles);
 
 // Get Articles that belongs to Analyst
-routes.get('/analyst/article', getAnalystArticles);
+routes.get('/analyst/article', ArticleController.getAnalystArticles);
 
 // Search by Article names
-routes.get('/search/:title/:moderator/:analyst', searchByTitle);
+routes.get('/search/:title/:moderator/:analyst', ArticleController.searchByTitle);
 
 
-export default routes;
+module.exports = routes;

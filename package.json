@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "NPM packages for SPEED backend",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node --experimental-modules --es-module-specifier-resolution=node index.js",
+    "start": "node index.js",
     "app": "nodemon index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
