@@ -31,7 +31,7 @@ const App = () => {
               <UserNavOptions UserType={UserType}/>
             </li>
             
-            <select className="userstate" onChange={handleChange}>
+            <select data-testid="user-state" className="userstate" onChange={handleChange}>
               <option value="">Select User state</option>
               <option value="user">User</option>
               <option value="moderator">Moderator</option>
